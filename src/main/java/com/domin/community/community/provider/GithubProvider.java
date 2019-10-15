@@ -1,5 +1,7 @@
 package com.domin.community.community.provider;
 
+
+
 import com.alibaba.fastjson.JSON;
 import com.domin.community.community.dto.AccesssTokenDTO;
 import com.domin.community.community.dto.GithubUser;
@@ -13,8 +15,9 @@ import org.springframework.stereotype.Component;
 public class GithubProvider {
     public String getAccesssToken(AccesssTokenDTO accesssTokenDTO){
         MediaType mediaType = MediaType.get("application/json;charset=utf-8");
-
         OkHttpClient client =new OkHttpClient();
+
+        System.out.println(accesssTokenDTO.toString());
         RequestBody body = RequestBody.create(mediaType, JSON.toJSONString(accesssTokenDTO));
         Request request = new Request.Builder()
                 .url("https://github.com/login/oauth/access_token")
@@ -40,6 +43,7 @@ public class GithubProvider {
         try {
             Response response =client.newCall(request).execute();
             String string = response.body().string();
+            System.out.println(string);
             GithubUser githubUser = JSON.parseObject(string,GithubUser.class);
             return githubUser;
         }catch (Exception e){

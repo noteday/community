@@ -1,6 +1,7 @@
 package com.domin.community.community.dto;
 
 public class GithubUser {
+    private  String login;
     private String name;
     private long id;
     private String bio;
@@ -36,5 +37,24 @@ public class GithubUser {
 
     public void setAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    @Override
+    public String toString() {
+        return "GithubUser{" +
+                "login='" + login + '\'' +
+                ", name='" + name + '\'' +
+                ", id=" + id +
+                ", bio='" + bio + '\'' +
+                ", avatarUrl='" + avatarUrl + '\'' +
+                '}';
     }
 }
