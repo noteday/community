@@ -1,10 +1,10 @@
-package com.domin.community.community.provider;
+package com.domin.community.provider;
 
 
 
 import com.alibaba.fastjson.JSON;
-import com.domin.community.community.dto.AccesssTokenDTO;
-import com.domin.community.community.dto.GithubUser;
+import com.domin.community.dto.AccesssTokenDTO;
+import com.domin.community.dto.GithubUser;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 import org.springframework.stereotype.Component;

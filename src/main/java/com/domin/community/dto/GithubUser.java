@@ -1,4 +1,4 @@
-package com.domin.community.community.dto;
+package com.domin.community.dto;
 
 public class GithubUser {
     private  String login;

@@ -1,4 +1,4 @@
-package com.domin.community.community;
+package com.domin.community;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
